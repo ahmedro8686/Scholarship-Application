@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ScholarshipHub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to ScholarshipHub</h1>
+    </header>
+    <main>
+        <form method="GET" action="/results">
+            <input type="text" name="query" placeholder="Search scholarships...">
+            <button type="submit">Search</button>
+        </form>
+    </main>
+</body>
+</html>
