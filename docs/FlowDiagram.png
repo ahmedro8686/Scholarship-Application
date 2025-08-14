@@ -1,0 +1,17 @@
+from graphviz import Digraph
+
+dot = Digraph(comment='ScholarshipHub Data Flow')
+
+# Nodes
+dot.node('A', 'Scraper')
+dot.node('B', 'Database')
+dot.node('C', 'API')
+dot.node('D', 'Frontend/UI')
+dot.node('E', 'User')
+
+# Edges
+dot.edges(['AB', 'BC', 'CD', 'DE'])
+
+# Output PNG
+dot.render('docs/FlowDiagram', format='png', cleanup=True)
+print("FlowDiagram.png generated in docs/")
