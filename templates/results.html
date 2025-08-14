@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results - ScholarshipHub</title>
+</head>
+<body>
+    <h1>Scholarship Results</h1>
+    <ul>
+        {% for s in scholarships %}
+            <li>
+                <a href="{{ s.url }}">{{ s.title }}</a> - {{ s.country }} - {{ s.level }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
